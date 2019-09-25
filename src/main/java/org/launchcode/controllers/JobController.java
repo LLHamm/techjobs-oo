@@ -26,6 +26,7 @@ public class JobController {
 
         Job job = jobData.findById(id);
         model.addAttribute(job);
+        model.addAttribute("title", "Job Details");
 
         return "job-detail";
     }
@@ -33,6 +34,7 @@ public class JobController {
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String add(Model model) {
         model.addAttribute(new JobForm());
+        model.addAttribute("title", "Add New Job");
         return "new-job";
     }
 

@@ -23,6 +23,7 @@ public class SearchController {
     @RequestMapping(value = "")
     public String search(Model model) {
         model.addAttribute(new SearchForm());
+        model.addAttribute("title", "Search in Jobs");
         return "search";
     }
 
@@ -39,6 +40,7 @@ public class SearchController {
         }
 
         model.addAttribute("jobs", jobs);
+        model.addAttribute("title", "Jobs Found");
 
         return "search";
     }

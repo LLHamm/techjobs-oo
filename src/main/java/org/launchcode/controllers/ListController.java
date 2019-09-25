@@ -25,6 +25,7 @@ public class ListController {
     public String list(Model model) {
         JobFieldType[] fields = JobFieldType.values();
         model.addAttribute("fields", fields);
+        model.addAttribute("title", "Job List");
         return "list";
     }
 
